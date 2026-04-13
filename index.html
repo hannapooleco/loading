@@ -385,19 +385,8 @@
       <!-- FORM — connect this to your email provider (Mailchimp, ConvertKit etc.)
            OR replace the form with a direct link to your Calendly / Cal.com booking page.
            See the note below the button for Squarespace instructions. -->
-      <div class="form" id="magnet-form">
-        <input type="text"  id="fname" placeholder="Your first name" autocomplete="given-name" />
-        <input type="email" id="femail" placeholder="Your email address" autocomplete="email" />
-        <button type="button" onclick="handleSubmit()">Claim My Free Audit →</button>
-        <p class="form-note">No spam. Ever. Unsubscribe any time.</p>
-      </div>
-
-      <!-- SUCCESS STATE — shown after submit -->
-      <div class="success-state" id="success">
-        <div class="tick">✓</div>
-        <h3>You're in — check your inbox.</h3>
-        <p>I'll be in touch shortly to book your free audit call. In the meantime, come say hello on Instagram.</p>
-      </div>
+      <a href="https://calendar.app.google/bTRCQJXQ4eiGXEMS8" target="_blank" rel="noopener" style="display:block; width:100%; padding:15px; background:#FF866B; color:#fff; font-family:'DM Sans',sans-serif; font-size:14px; font-weight:600; border-radius:6px; text-decoration:none; text-align:center; transition:opacity 0.2s;" onmouseover="this.style.opacity='0.9'" onmouseout="this.style.opacity='1'">Claim My Free Audit →</a>
+      <p class="form-note">Free · 30 minutes · No pitch</p>
 
     </div>
   </div>
@@ -422,32 +411,7 @@
 
 </div>
 
-<script>
-  function handleSubmit() {
-    const name  = document.getElementById('fname').value.trim();
-    const email = document.getElementById('femail').value.trim();
 
-    if (!name) {
-      document.getElementById('fname').focus();
-      document.getElementById('fname').style.borderColor = '#FF866B';
-      return;
-    }
-
-    if (!email || !email.includes('@')) {
-      document.getElementById('femail').focus();
-      document.getElementById('femail').style.borderColor = '#FF866B';
-      return;
-    }
-
-    // ── SWAP THIS BLOCK for your actual form submission ──
-    // e.g. fetch to Mailchimp, ConvertKit, or just redirect:
-    // window.location.href = 'https://calendly.com/yourlink';
-    // ────────────────────────────────────────────────────
-
-    document.getElementById('magnet-form').style.display = 'none';
-    document.getElementById('success').style.display = 'block';
-  }
-</script>
 
 </body>
 </html>
